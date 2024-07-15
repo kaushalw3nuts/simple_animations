@@ -1,0 +1,14 @@
+
+* {
+	margin: 0;
+	padding: 0;
+	background: #131722;
+	color: #FFFFFF;
+}
+
+section { position: fixed;  left: 0; top: 0; width: 100%; height: 100vh; background-image: url(4K-Car-Wallpaper-HD.jpg); background-repeat: no-repeat; background-position: center; background-size: cover; background-attachment: fixed; clip-path: circle(0 at center); }
+
+.content { margin-top: 200vh; padding: 100px; position: relative; }
+.content h2 { font-size: 40px; margin-bottom: 20px; }
+.content p { font-size: 20px; line-height: 1.55; }
+.title { position: relative; top: 400px; text-align: center; z-index: 1; font-size: 40px; width: 100%; }

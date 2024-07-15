@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Animated Waves using SVG</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<section>
+			<h2>Scroll Down...</h2>
+		</section>
+		<div class="box">
+			<h2 class="text1">Scroll Trigger is Awesome</h2>
+			<h2 class="text2">This is My First Code</h2>
+			<h2 class="text3">How it is?</h2>
+			<img src="images/lamborghini-car-lamborghini-aventador-vehicle-wallpaper-preview.jpg" class="logo" alt="">
+		</div>
+		<div class="box2">
+			<h2 class="text4">Stay Tuned</h2>
+			<h2 class="text5">For more Updates</h2>
+			<h2 class="text6">Thanks For Watching :)</h2>
+		</div>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+		<script>
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: ".box",
+					start: "center center",
+					end: "bottom top",
+					markers: true,
+					scrub: true,
+					pin: true,
+				}
+			})
+			.from(".text1", { 
+				x: innerWidth * 1,
+			})
+			.from(".text2", { 
+				x: innerWidth * -1,
+			})
+			.from(".text3", { 
+				x: innerWidth * 1,
+			})
+			.from(".logo", {
+				y: innerHeight * 1,
+				rotate: 360,
+				duration: 5,
+			})
+
+			gsap.timeline({
+				scrollTrigger: {
+					trigger: ".box2",
+					start: "center center",
+					end: "bottom top",
+					markers: true,
+					scrub: true,
+					pin: true,
+				}
+			})
+			.from(".box2", {
+				opacity: 0,
+			})
+			.from(".text4", { 
+				x: innerWidth * 1,
+			})
+			.from(".text5", { 
+				x: innerWidth * -1,
+			})
+			.from(".text6", { 
+				x: innerWidth * 1,
+			})
+		</script>
+	</body>
+</html>

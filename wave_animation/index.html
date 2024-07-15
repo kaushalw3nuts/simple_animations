@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Animated Waves using SVG</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<section>
+			<svg width="100%" height="100%" version="1.1" xmlns="http://www.w3.org/2000/svg"><defs></defs><path id="myID" d=""/></svg>		  
+			<h2>Wave Animation</h2>
+		</section>
+		<script src="jquery.min.js"></script>
+		<script src="gsap.min.js"></script>
+		<script src="jquery.wavify.js"></script>
+		<script>
+			let myWave = $('#myID').wavify({
+				height: 550,
+				bones: 10,
+				amplitude: 50,
+				color: '#191667',
+				speed: .2
+			});
+		</script>
+	</body>
+</html>

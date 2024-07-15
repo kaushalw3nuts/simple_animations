@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>plane_scroll_animation</title>
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+		<div class="layer">
+			<img src="images/plane.png" alt="" class="plane">
+		</div>
+		<section></section>
+		<div class="text">
+			<h2>Welcome to the <br> <span>Lamborghini World</span></h2>
+		</div>
+		<section class="sec2"></section>
+		<script>
+			let layer = document.querySelector('.layer');
+
+			window.addEventListener("scroll", function() {
+				let value = window.scrollY;
+				layer.style.left = value*2+'px';
+			});
+		</script>
+	</body>
+</html>

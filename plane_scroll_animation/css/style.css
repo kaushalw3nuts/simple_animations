@@ -1,0 +1,20 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background: #000000;
+}
+
+.layer { position: fixed; left: 0; width: 100%; height: 100vh; background: #131722; }
+.layer::after { content: ""; position: absolute; left: -40px; width: 80px; height: 200px; background: #131722; box-shadow: 0 calc(90vh - 100px) 0 #131722; }
+.layer .plane { position: absolute; z-index: 1; left: -55vh; height: 100vh; }
+
+section { height: 200vh; background-image: url(../images/4K-Car-Wallpaper-HD.jpg); background-size: cover; background-attachment: fixed; }
+
+section.sec2 { height: 100vh; background-image: url(../images/2018-lamborghini-huracan-performante-is-a-car-worth-waiting-for-feature-car-and-driver-photo-677160-s-original.jpg); background-size: cover; background-attachment: fixed; }
+
+.text { height: 50vh; display: flex; align-items: center; justify-content: center; text-align: center; }
+.text h2 { color: #FFFFFF; font-size: 50px; font-weight: 300; text-transform: uppercase; letter-spacing: 0.25em; line-height: 2.5em; }
+.text h2 span { font-size: 140px; font-weight: 900; letter-spacing: 0; background-image: url(../images/2018-lamborghini-huracan-performante-is-a-car-worth-waiting-for-feature-car-and-driver-photo-677160-s-original.jpg); background-size: cover; background-attachment: fixed; background-clip: text; color: transparent; }

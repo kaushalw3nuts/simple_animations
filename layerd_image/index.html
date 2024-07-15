@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<title>Layered Image Parallax Effect on Mousemove</title>
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="image_Wrap">
+			<img src="krishna-yadav-nVGv6BLPjns-unsplash.jpg" class="layer" data-speed="40">
+			<img src="krishna-yadav-nVGv6BLPjns-unsplash.jpg" class="layer" data-speed="30">
+			<img src="krishna-yadav-nVGv6BLPjns-unsplash.jpg" class="layer" data-speed="20">
+			<img src="krishna-yadav-nVGv6BLPjns-unsplash.jpg" class="layer" data-speed="10">
+		</div>
+		<script>
+			document.addEventListener('mousemove', parallax);
+			function parallax(e) {
+				this.querySelectorAll('.layer').forEach(layer => {
+					let speed = layer.getAttribute('data-speed');
+					let x = (window.innerWidth - e.pageX*speed)/250;
+					let y = (window.innerWidth - e.pageX*speed)/250;
+
+					layer.style.transform = `translate(${-x}px) translateY(${y}px)`;
+				});
+			};
+		</script>
+	</body>
+</html>
