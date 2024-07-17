@@ -276,7 +276,7 @@ p { color: #909090; font-weight: 400; font-size: 18px; line-height: 1.5; }
     }
 }
 .bnr_wrap .marquee .marquee_images li { display: block; position: relative; }
-.bnr_wrap .btnlink { display: flex; justify-content: center; }
+.bnr_wrap .btnlink { display: flex; justify-content: center; position: relative; z-index: 11; }
 .bnr_wrap .btnlink .primary_btn { height: 38px; }
 .bnr_wrap .picture { margin: 56px auto 0 auto; position: relative; border: 1px solid #171717; border-radius: 24px; max-width: 1202px; }
 .bnr_wrap .picture::before { content: ""; background-image: radial-gradient(46.35% 3599.23% at 50.09% 50%, #e47320 0, rgba(228, 115, 32, 0) 100%); z-index: 0; inset: -1px; position: absolute; }
