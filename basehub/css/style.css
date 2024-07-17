@@ -154,6 +154,23 @@ img,
 svg,
 iframe { max-width: 100%; border: none; outline: none; }
 
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 10px;
+}
+ 
+::-webkit-scrollbar-track {
+    background-color: #5f5e5e;
+    border-radius: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: rgba(0, 0, 0, .3);
+    border: 2px solid #5f5e5e;
+    border-radius: 8px;
+}
+
 h1 { color: #F3F3F3; font-weight: 400; font-size: 47px; line-height: 1.13; margin-bottom: 12px; text-align: center; }
 h2 { color: #F3F3F3; font-weight: 700; font-size: 32px; line-height: 1.18; margin-bottom: 16px; text-align: center; }
 
@@ -243,3 +260,26 @@ p { color: #909090; font-weight: 400; font-size: 18px; line-height: 1.5; }
 .bnr_wrap h1 span { display: flex; color: #909090; justify-content: center; }
 .bnr_wrap .text { display: flex; max-width: 692px; margin: 0 auto 24px auto; font-style: normal; font-weight: 400; font-size: 16px; line-height: 1.37; color: #909090; text-align: center; }
 .bnr_wrap .use { display: flex; justify-content: center; margin-bottom: 4px; font-weight: 400; font-size: 14px; line-height: 1.43; color: #909090; }
+.bnr_wrap .marquee { display: flex; justify-content: center; align-items: center; max-width: 500px; margin: 0 auto; overflow: hidden; column-gap: 16px; }
+.bnr_wrap .marquee .marquee_images { display: flex; margin-bottom: 24px; min-width: 100%; flex: none; justify-content: space-around; }
+.scroll {
+    animation: scroll 40s linear infinite;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(calc(-100% - 1rem));
+    }
+}
+.bnr_wrap .marquee .marquee_images li { display: block; position: relative; }
+.bnr_wrap .btnlink { display: flex; justify-content: center; }
+.bnr_wrap .btnlink .primary_btn { height: 38px; }
+.bnr_wrap .picture { margin: 56px auto 0 auto; position: relative; border: 1px solid #171717; border-radius: 24px; max-width: 1202px; }
+.bnr_wrap .picture::before { content: ""; background-image: radial-gradient(46.35% 3599.23% at 50.09% 50%, #e47320 0, rgba(228, 115, 32, 0) 100%); z-index: 0; inset: -1px; position: absolute; }
+.bnr_wrap .picture::after { content: ""; width: calc(100% + 2px); height: 41%; z-index: 20; position: absolute; left: -1px; bottom: -1px; background: linear-gradient(to bottom, rgba(4, 4, 4, 0.2) 0%, rgba(4, 4, 4, 0.8) 50%, rgba(4, 4, 4, 1) 100%); }
+.bnr_wrap .picture .back_shadow { background-image: url(../images/back-shadow.svg); background-repeat: no-repeat; background-size: 100% 100%; filter: blur(90px); position: absolute; left: 50%; aspect-ratio: 1200 / 195; width: 100%; transform: translate(-50%, 0) scale(1, 1); opacity: 1; will-change: transform, opacity; top: -72px; }
+.bnr_wrap .picture .image_wrap { padding: 24px; background: #040404; z-index: 10; position: relative; border-radius: 24px; }
